@@ -2,9 +2,9 @@
 
 CREATE TABLE animals (
     id int,
-    name char(100),
+    name char,
     date_of_birth date,
     escape_attempts int,
-    neutered bit,
+    neutered bool,
     weight_kg decimal
 );
