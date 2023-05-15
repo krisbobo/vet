@@ -4,43 +4,44 @@
 
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Vet Clinic\] ](#-vet-clinic-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [🚀 Live Demo and other links ](#-live-demo-and-other-links-)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Setup](#setup)
-    - [Install](#install)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
-  - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Vet Clinic] <a name="about-project"></a>
+# 📖 Vet Clinic Database <a name="about-project"></a>
 
-> **Vet clinic** is a postgreSQL database that stores details of animals in a veterinary clinic and generates specific reports using SQL queries.
+1. Vet Clinic Database is a relational database to store animals' information, insert data and query data for processing.
+
+2. In this project, records will be updated and deleted. Aggregate functions and GROUP BY will be used to answer analytical questions.
+
+3. In this project new tables and a foreign key columns will be added to the existing animals table to model one-to-many relationships. Afterward, JOIN will be used to query the data.
+
+4. In this project, many-to-many relationships will be added and more complex queries to be used to answer questions will be written.
+
+5. In this project we([Lucas](https://github.com/Lucash2022) and [Christian Kiyong](https://github.com/krisbobo)) will have a chance to optimize some slow queries in our database.
+
 ## 🛠 Built With <a name="built-with"></a>
 
-The major tools and languages used are:
-
-- PostgreSQL
-- SQL
-- Terminal
-<!-- Features -->
 ### Tech Stack <a name="tech-stack"></a>
 
-> The following tech stack were used
-
 <details>
-  <summary>Client</summary>
+<summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
@@ -50,58 +51,55 @@ The major tools and languages used are:
 
 ### Key Features <a name="key-features"></a>
 
-> The database has the following key features:
+- **Database named vet-clinic**
+- **Table named animal**
+- **Update animal table**
+- **Aggregate animal table**
+- **Query multiple tables**
+- **Many-to-Many relationships**
+- **database performance audit**
 
-- **[Animals table with details such as name, date of birth, etc.]**
-- **[Queries which provides specific details as per instructions]**
-
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo and other links <a name="live-demo"></a>
-
-> None available
-
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> In order to run this project you need:
+To get a local copy up and running, follow these steps.
 
-- PostgreSQL v15
-- Terminal
+### Prerequisites
+
+In order to run this project you need postgres:
+
+On Linux:
+
+```sh
+ sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
+
+On Windows
+
+Go to [postgres website](https://www.postgresql.org/) and download the installer and follow the installation process
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-> git@github.com:krisbobo/vet.git
-
-### Install
-
-Install Postgres SQL
-> [PostgreSQL download](https://www.postgresql.org/download/)
-
-### Usage
-
-To run the project, execute the following command:
-
 ```sh
- psql -u postgres
+  git clone git@github.com/Lucash20022/Vet-clinic
+  cd vet-clinic
 ```
 
-### Run tests
-
-None available
-
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
+👤 **Lucas Erkana**
+
+- GitHub: [@Lucash2022](https://github.com/Lucash2022)
+- Twitter: [@Lucas_David_22](https://twitter.com/@Lucas_David_22)
+- LinkedIn: [Lucas Erkana](https://www.linkedin.com/in/lucas-erkana/)
 
 👤 **Christian Kiyong**
 
@@ -109,50 +107,44 @@ None available
 - Twitter: [ChrisboboSys](https://twitter.com/ChrisboboSys)
 - LinkedIn: [kiyong-christian](https://linkedin.com/in/christian-kiyong)
 
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> The following two features will be added to this project;
+- [ ] ** add database schema diagram**
 
-- **Add join table for visits**
-- **Database performance edit**
-- **Add database schema diagram**
-
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome.
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, don't forget give a ⭐️ or buy me a coffee ☕️
+If you like this project please don't forget to give me a star
 
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank [Microverse](https://github.com/microverseinc) for providing the template for this project
+I would like to thank microverse for providing me the template for this project
 
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
-
-<!-- LICENSE -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
-<p align="right">[<a href="#readme-top">Back to Top</a>]</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
