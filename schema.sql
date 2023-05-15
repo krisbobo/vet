@@ -1,48 +1,56 @@
 /* Database schema to keep the structure of entire database. */
-CREATE TABLE animals (
-    id SERIAL PRIMARY KEY,
-    name varchar,
-    date_of_birth date,
-    escape_attempts int,
-    neutered bool,
-    weight_kg decimal
-);
-
-ALTER TABLE animals
-ADD COLUMN species varchar;
-
-CREATE TABLE owners (
-  id int GENERATED ALWAYS AS IDENTITY,
-  full_name varchar,
-  age int,
+CREATE TABLE owners(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  full_name VARCHAR(20),
+  age INT,
   PRIMARY KEY(id)
 );
 
-CREATE TABLE species (
-  id int GENERATED ALWAYS AS IDENTITY,
-  name varchar,
+CREATE TABLE species(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(20),
   PRIMARY KEY(id)
 );
 
-ALTER TABLE animals
-  DROP COLUMN species;
-ALTER TABLE animals ADD species_id int REFERENCES species(id);
-ALTER TABLE animals ADD owner_id int REFERENCES owners(id);
+CREATE TABLE animals(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(20),
+  date_of_birth DATE,
+  escape_attempts INT,
+  neutered BOOLEAN,
+  weight_kg DECIMAL,
+  species_id INT REFERENCES species(id),
+  owner_id INT REFERENCES owners(id),
+  PRIMARY KEY(id)
+);
 
 CREATE TABLE vets(
-    id SERIAL PRIMARY KEY,
-    name varchar,
-    age int,
-    date_of_graduation date
-)
-
-CREATE TABLE specializations (
-  vet_id int REFERENCES vets(id),
-  species_id int REFERENCES species(id)
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(20),
+  age INT,
+  date_of_graduation DATE,
+  PRIMARY KEY(id)
 );
 
-CREATE TABLE visits (
-  animal_id int REFERENCES animals(id),
-  date_of_visit date,
-  vet_id int REFERENCES vets(id)
+CREATE TABLE specializations(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  species_id INT REFERENCES species(id),
+  vet_id INT REFERENCES vets(id),
+  PRIMARY KEY(id)
 );
+
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT REFERENCES animals(id),
+  vet_id INT REFERENCES vets(id),
+  date_of_visit DATE,
+  PRIMARY KEY(id)
+);
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX visits_index ON visits (animal_id DESC);
+
+CREATE INDEX visit_index ON visits (animal_id ASC);
+
+CREATE INDEX owners_index ON owners (email ASC);
