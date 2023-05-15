@@ -34,7 +34,7 @@
 
 4. In this project, many-to-many relationships will be added and more complex queries to be used to answer questions will be written.
 
-5. In this project we([Lucas](https://github.com/Lucash2022) and [Christian Kiyong](https://github.com/krisbobo)) will have a chance to optimize some slow queries in our database.
+5. In this project we([Lucas Erkana](https://github.com/Lucash2022) and [Christian Kiyong](https://github.com/krisbobo)) will have a chance to optimize some slow queries in our database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -86,8 +86,8 @@ Go to [postgres website](https://www.postgresql.org/) and download the installer
 Clone this repository to your desired folder:
 
 ```sh
-  git clone git@github.com/Lucash20022/Vet-clinic
-  cd vet-clinic
+  git clone https://github.com/krisbobo/vet.git
+  cd vet
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
