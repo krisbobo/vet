@@ -38,6 +38,8 @@
 
 6. In this project we([Lucas Erkana](https://github.com/Lucash2022) and [Christian Kiyong](https://github.com/krisbobo)) will use your existing project and create a database schema diagram for it.
 
+7. In this project we([Lucas Erkana](https://github.com/Lucash2022) and [Christian Kiyong](https://github.com/krisbobo)) will get a database diagram, interpret it, and implement the SQL needed to build that database.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -61,6 +63,7 @@
 - **Many-to-Many relationships**
 - **database performance audit**
 - **database schema diagram**
+- **database based on schema diagram**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
